@@ -30,17 +30,17 @@ The analysis specifically evaluates:
 - Sample Period: January 1990 – December 2019
 - Observations: 360
 
-The series was seasonally adjusted and linearly detrended prior to modeling. An Augmented Dickey-Fuller (ADF) test confirmed stationarity with a p-value of 0.01. :contentReference[oaicite:0]{index=0}
+The series was seasonally adjusted and linearly detrended prior to modeling. An Augmented Dickey-Fuller (ADF) test confirmed stationarity with a p-value of 0.01. 
 
 ---
 
 ## Methodology
 
 ### Time Series Modeling
-The project estimated multiple ARMA(p,q) specifications ranging from p,q = 0–4 using Akaike Information Criterion (AIC) minimization and Ljung–Box residual diagnostics for model selection. :contentReference[oaicite:1]{index=1}
+The project estimated multiple ARMA(p,q) specifications ranging from p,q = 0–4 using Akaike Information Criterion (AIC) minimization and Ljung–Box residual diagnostics for model selection. 
 
 ### Forecast Evaluation
-A rolling-window forecasting framework was implemented using 120-month rolling windows to compute 1-step-ahead Mean Squared Forecast Errors (MSFE) across competing models. :contentReference[oaicite:2]{index=2}
+A rolling-window forecasting framework was implemented using 120-month rolling windows to compute 1-step-ahead Mean Squared Forecast Errors (MSFE) across competing models. 
 
 ### Residual Diagnostics
 Residual autocorrelation and conditional heteroskedasticity were analyzed using:
@@ -49,7 +49,7 @@ Residual autocorrelation and conditional heteroskedasticity were analyzed using:
 - ARCH LM tests
 
 ### Volatility Modeling
-Because strong ARCH effects were detected in the ARMA residuals, a GARCH(1,1) model was estimated to capture time-varying inflation volatility. :contentReference[oaicite:3]{index=3}
+Because strong ARCH effects were detected in the ARMA residuals, a GARCH(1,1) model was estimated to capture time-varying inflation volatility. 
 
 ---
 
@@ -64,21 +64,21 @@ The ARMA(2,1) model was selected as the preferred specification based on:
 The model achieved:
 - AIC = –651.73
 - MSFE = 0.0079
-- R² = 0.9795 :contentReference[oaicite:4]{index=4}
+- R² = 0.9795 
 
 ### Inflation Persistence
-Results indicate strong autoregressive persistence and mean-reverting dynamics in sticky-price inflation. Both AR coefficients and the MA coefficient were highly statistically significant (p < 0.001). :contentReference[oaicite:5]{index=5}
+Results indicate strong autoregressive persistence and mean-reverting dynamics in sticky-price inflation. Both AR coefficients and the MA coefficient were highly statistically significant (p < 0.001).
 
 ### Volatility Clustering
-ARCH LM tests detected significant conditional heteroskedasticity, indicating that inflation volatility clusters over time. :contentReference[oaicite:6]{index=6}
+ARCH LM tests detected significant conditional heteroskedasticity, indicating that inflation volatility clusters over time. 
 
 The estimated GARCH(1,1) model produced:
 - α₁ + β₁ ≈ 0.92
 - High volatility persistence
-- Stable long-run variance dynamics :contentReference[oaicite:7]{index=7}
+- Stable long-run variance dynamics 
 
 ### Forecast Results
-The ARMA-GARCH forecasts predicted a gradual decline in sticky-price inflation over the subsequent 12 months, while confidence intervals widened over longer horizons due to volatility persistence. :contentReference[oaicite:8]{index=8}
+The ARMA-GARCH forecasts predicted a gradual decline in sticky-price inflation over the subsequent 12 months, while confidence intervals widened over longer horizons due to volatility persistence. 
 
 ---
 
